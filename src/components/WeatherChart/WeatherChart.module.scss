@@ -1,0 +1,12 @@
+@use "/src/styles/mixin" as mix;
+
+.chart_container {
+	--size: 600px;
+
+	@include mix.to(m) {
+		--size: calc(100vw - (40px * 2));
+	}
+
+	width: var(--size);
+	height: var(--size);
+}

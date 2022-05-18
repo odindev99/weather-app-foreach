@@ -50,7 +50,9 @@ button {
 	// --max-width: 320px;
 
 	&.details {
-		max-width: 600px;
+		@include mix.from(s) {
+			max-width: 600px;
+		}
 	}
 
 	width: 100%;
@@ -65,21 +67,16 @@ button {
 	}
 }
 
-.chart-container {
-	width: 40vw;
-	aspect-ratio: 1 / 1;
-}
-
 // Vx charts custom styles
 .vx-axis g,
 .vx-axis line {
-  stroke: #999;
+	stroke: #999;
 }
 
 .vx-axis text {
-  fill: #999;
+	fill: #999;
 }
 
 .vx-bar {
-  transition: height 150ms, y 150ms;
+	transition: height 150ms, y 150ms;
 }

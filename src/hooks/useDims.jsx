@@ -1,6 +1,9 @@
 import { useState, useLayoutEffect } from "react";
+import useWindowDimensions from "./useWindowDimensions";
 
 function useDims(ref, isSvg = false) {
+	const screenWidth = useWindowDimensions();
+
 	const [dim, setDim] = useState({
 		height: 0,
 		width: 0,
@@ -27,7 +30,7 @@ function useDims(ref, isSvg = false) {
 				});
 			}
 		}
-	}, [ref, isSvg]);
+	}, [ref, isSvg, screenWidth]);
 
 	return dim;
 }

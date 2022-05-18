@@ -3,8 +3,8 @@ import { useContext, useEffect } from "react";
 import WeatherCard from "../../components/WeatherCard/WeatherCard";
 import WeatherApi from "../../services/WeatherApi";
 import { WeatherContext } from "../../context/WeatherContext";
-import BarChart from "../../components/BarChart/BarChart";
 import Spinner from "../../components/Spinner/Spinner";
+import WeatherChart from "../../components/WeatherChart/WeatherChart";
 
 const getAndFormatWeather = async () => {
 	try {
@@ -53,20 +53,13 @@ const Home = () => {
 						)}
 					</div>
 
-					<div className="flex flex-col items-center mt-8">
-						<h2 className="font-bold text-xl mb-8 text-center">
-							Variacion de Temperatura Promedio por Día
-						</h2>
-						<div className="chart-container">
-							<BarChart
-								data={WeatherApi.formatDataByDayForHomeChart(
-									weatherDataByDayName
-								)}
-								colorMultiplier={1}
-								xAxieLabel="Día"
-							/>
-						</div>
-					</div>
+					<WeatherChart
+						title="Variacion de Temperatura Promedio por Día"
+						data={WeatherApi.formatDataByDayForHomeChart(
+							weatherDataByDayName
+						)}
+						xAxieLabel="Día"
+					/>
 				</>
 			)}
 		</>
