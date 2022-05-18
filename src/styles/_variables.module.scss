@@ -1,0 +1,27 @@
+$breakpoints: (
+	xxs: 350px,
+	xs: 480px,
+	// < Mobile devices
+	s: 576px,
+	m: 768px,
+	// < Tablets
+	l: 1025px,
+	xl: 1200px,
+	xxl: 1400px,
+	// < Laptops, Desktops and Extra large screens
+);
+
+// Variables de apilamineto z-index scss
+$z-back: -10;
+$z-normal: 1;
+$z-tooltip: 10;
+$z-fixed: 100;
+$z-modal: 1000;
+
+// Colors
+$primary-color: #b7e7ff;
+$secondary-color: #05254c;
+
+// Layout
+$max-width: 1300px;
+$header-height: 70px;

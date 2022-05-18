@@ -1,0 +1,9 @@
+@use "../../styles/variables.module" as vars;
+
+.container {
+	&:not(:last-child) {
+		border-bottom: 1px solid vars.$secondary-color;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+	}
+}
